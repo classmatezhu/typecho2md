@@ -12,7 +12,7 @@ import codecs
 import pymysql
 
 
-db = pymysql.connect("ip", "root", "pass", "typecho")
+db = pymysql.connect(host="ip", user="root", password="pass", database="typecho")
 cursor = db.cursor()
 sql = "SELECT * FROM typecho_contents WHERE typecho_contents.type = 'post';"
 try:
